@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import LoginScreen from './screens/LoginScreen';
-let context = LoginScreen;
+import { StyleSheet, View } from 'react-native';
+import EnterDetailsScreen from './screens/EnterDetailsScreen';
+let content = <EnterDetailsScreen/>;
 export default function App() {
   return (
-    {context}
+    <View style={styles.container}>
+      {content}
+    </View>
   );
 }
 
@@ -13,5 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    height: '100%',
+    width: '100%'
   },
 });

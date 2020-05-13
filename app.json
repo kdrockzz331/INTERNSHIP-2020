@@ -1,11 +1,10 @@
 {
   "expo": {
-    "name": "ChamberOfProduct",
-    "slug": "ChamberOfProduct",
+    "name": "Lagaland",
+    "slug": "Lagaland",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
