@@ -9,7 +9,7 @@ import {
     Alert,
     Image,
   } from 'react-native';
-
+import MainButton from '../components/MainButton';
 
 export default function Password(){
     const [pas,setPas]=useState({password:'',confirmpassword:''});
@@ -21,9 +21,10 @@ export default function Password(){
     const confirmpasswo=(val)=>{
         setPas((v) => {return {password:v.password , confirmpassword:val}});
     }
-    const handler=()=>{
+    const passHandler=()=>{
         if(pas.password==pas.confirmpassword){
             setPas({password:'',confirmpassword:''});
+            //Navigate from here
         }else{
             Alert.alert("Not Matched",'Please Enter same password in both the field!!',[{text:'OK', onPress: ()=>{}}])
    
@@ -68,25 +69,20 @@ export default function Password(){
                  <Image 
                      source={ctwo?require('../assets/interface.png'):require('../assets/diagonal.png')}
                      style={styles.img}
-                     
                  />
                  </TouchableOpacity>
              </View>
           </View>
-          <TouchableWithoutFeedback onPress={handler}>
-          <View style={styles.button}>
-           <Text style={styles.bt}>SAVE</Text>
-          </View>
-          </TouchableWithoutFeedback>
+          <MainButton style={styles.buttonContainer} onPress={passHandler}>{"SAVE"}</MainButton>
       </View>
     )
 }
 
 const styles=StyleSheet.create({
     container:{
-        height:'100%',
-        flexDirection:'column',
-        justifyContent:'space-evenly'
+        flex: 1,
+        alignItems: 'center',
+        justifyContent:'center'
     },
     list:{
         flexDirection:'column',
@@ -149,5 +145,9 @@ const styles=StyleSheet.create({
         marginRight:10,
         zIndex:3,
         // position:'absolute'
+    },
+    buttonContainer: {
+        marginTop: "10%",
+        marginLeft: "60%"
     }
 })

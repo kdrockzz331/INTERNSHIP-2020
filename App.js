@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import EnterDetailsScreen from './screens/EnterDetailsScreen';
-let content = <EnterDetailsScreen/>;
+import Password from './screens/Password';
+let content = <Password/>;
 export default function App() {
   return (
     <View style={styles.container}>
