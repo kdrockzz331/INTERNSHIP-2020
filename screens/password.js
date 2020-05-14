@@ -25,7 +25,7 @@ export default function Password(){
         if(pas.password==pas.confirmpassword){
             setPas({password:'',confirmpassword:''});
         }else{
-            Alert.alert("Not Matched",'Please Enter same password in both the field!!',[{text:'OK', onPress: ()=>{}}])
+            Alert.alert("Not Matched",'Please Enter Same Password!!',[{text:'OK', onPress: ()=>{}}])
    
         }
         
