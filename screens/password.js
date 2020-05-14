@@ -6,8 +6,8 @@ import {
     TouchableOpacity,
     TouchableWithoutFeedback,
     View,
+    Alert,
     Image,
-    Button
   } from 'react-native';
 
 
@@ -22,7 +22,13 @@ export default function Password(){
         setPas((v) => {return {password:v.password , confirmpassword:val}});
     }
     const handler=()=>{
-        setPas({password:'',confirmpassword:''});
+        if(pas.password==pas.confirmpassword){
+            setPas({password:'',confirmpassword:''});
+        }else{
+            Alert.alert("Not Matched",'Please Enter same password in both the field!!',[{text:'OK', onPress: ()=>{}}])
+   
+        }
+        
     }
     
     return (
