@@ -11,7 +11,7 @@ import {
   } from 'react-native';
 import MainButton from '../components/MainButton';
 
-export default function Password(){
+export default function PasswordScreen(){
     const [pas,setPas]=useState({password:'',confirmpassword:''});
     const [cone,setCone]=useState(false);
     const [ctwo,setCtwo]=useState(false);
@@ -26,7 +26,7 @@ export default function Password(){
             setPas({password:'',confirmpassword:''});
             //Navigate from here
         }else{
-            Alert.alert("Not Matched",'Please Enter same password in both the field!!',[{text:'OK', onPress: ()=>{}}])
+            Alert.alert("Not Matched",'Please Enter same password in both the field!!',[{text:'OK', onPress: ()=>{setPas({password:'',confirmpassword:''})}}])
    
         }
         
@@ -55,7 +55,7 @@ export default function Password(){
 
              </View>
              <View style={styles.newcontainer}>
-                 <Text>*Atleast 6 characters long. Must include a number and a letter</Text>
+                 <Text style={{color:'gray'}}>*Atleast 6 characters long. Must include a number and a letter</Text>
              </View>
              <View style={styles.content}>
              <TextInput 
@@ -92,11 +92,11 @@ const styles=StyleSheet.create({
         marginTop:20
     },
     content:{
-        width:'90%',
+        width:'85%',
         paddingVertical:0,
-        borderBottomColor:'red',
+        borderBottomColor:'#A7331A',
         borderBottomWidth:2,
-        marginTop:20,
+        marginTop: 30,
         flexDirection:'row',
         alignItems:'center',
         alignContent:'center',
@@ -110,7 +110,7 @@ const styles=StyleSheet.create({
 
     },
     newcontainer:{
-        width:'90%',
+        width:'85%',
         marginTop:3
     },
     newtext:{
@@ -122,14 +122,14 @@ const styles=StyleSheet.create({
         paddingLeft:10,
         paddingRight:5,
         zIndex:2,
-        fontSize:20
+        fontSize:18
         // position:'absolute'
         
     },
     button:{
         width:'40%',
         marginLeft:'50%',
-        backgroundColor:'red',
+        backgroundColor:"#A7331A",
         paddingVertical:15,
         borderRadius:10
     },

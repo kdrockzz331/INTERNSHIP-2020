@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         fontSize: 26,
     },
     input: {
-        width: "90%",
+        width: "95%",
         borderBottomWidth: 3,
         borderBottomColor: "#A7331A",
         fontSize: 18,
@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         width: "100%",
-        marginTop:70,
+        marginTop: "10%",
+        marginRight: 30,
         alignItems: 'flex-end',
     }
 });

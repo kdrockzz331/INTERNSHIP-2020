@@ -1,8 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import EnterDetailsScreen from './screens/EnterDetailsScreen';
-import Password from './screens/Password';
-let content = <Password/>;
+import PasswordScreen from './screens/PasswordScreen';
+import OTPVerificationScreen from './screens/OTPVerificationScreen';
+let content = <OTPVerificationScreen phonenumber={"+919999999999"}/>;
 export default function App() {
   return (
     <View style={styles.container}>
@@ -13,10 +14,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100%',
-    width: '100%'
+    flex: 1,//DO NOT CHANGE ANYTHING HERE
   },
 });
