@@ -1,18 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import BoxInput from '../components/BoxInput';
+import OtpInputs from "react-native-otp-inputs";
 const OTPVerificationScreen = props => {
-    const [OTP1, setOTP1] = useState(-1);
-    const [OTP2, setOTP2] = useState(-1);
-    const [OTP3, setOTP3] = useState(-1);
-    const [OTP4, setOTP4] = useState(-1);
-    let OTP = "XXXX";
-    if (OTP1 !== -1 && OTP2 !== -1 && OTP3 !== -1 && OTP4 !== -1) {
-        OTP = OTP1+""+OTP2+""+OTP3+""+OTP4;
-        if(OTP.length === 4){
-            //navigate/code from here
-        }
-    }
     return (
         <View style={styles.screen}>
             <View style={styles.textContainer1}>
@@ -21,20 +11,18 @@ const OTPVerificationScreen = props => {
             <View style={styles.textContainer2}>
                 <View><Text style={styles.text2}>{"We sent a 4-digit code to " + props.phonenumber}</Text></View>
             </View>
-            <View style={styles.textInputContainer1}>
-                <BoxInput
-                    onChangeText={(inputText) => { setOTP1(inputText.replace(/[^0-9]/g, '')) }}
-                />
-                <BoxInput
-                    onChangeText={(inputText) => { setOTP2(inputText.replace(/[^0-9]/g, '')) }}
-                />
-                <BoxInput
-                    onChangeText={(inputText) => { setOTP3(inputText.replace(/[^0-9]/g, '')) }}
-                />
-                <BoxInput
-                    onChangeText={(inputText) => { setOTP4(inputText.replace(/[^0-9]/g, '')) }}
-                />
-            </View>
+            <OtpInputs
+                style={styles.textInputContainer1}
+                placeholder={"-"}
+                inputStyles={styles.otpinput}
+                handleChange={
+                    code => {
+                        console.log(code)
+                        //navigate from here
+                    }
+                }
+                numberOfInputs={4}
+            />
             <View style={styles.textContainer3}>
                 <TouchableOpacity onPress={() => { }}>
                     <View><Text style={styles.text3}>RESEND CODE BY SMS</Text></View>
@@ -80,6 +68,15 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginHorizontal: "20%",
         marginVertical: "5%"
+    },
+    otpinput: {
+        fontSize: 22,
+        height: 50,
+        width: 40,
+        borderWidth: 1,
+        borderColor: "#A7331A",
+        borderWidth: 3,
+        textAlign: 'center',
     }
 });
 export default OTPVerificationScreen;
