@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
 import {ListPicker} from 'react-native-ultimate-modal-picker';
-import RadioButton from './components/Radiobutton';
-import DropdownMenuC from './components/DropdownMenuC';
-import DropdownMenuR from './components/DropdownMenuR';
+import RadioButton from '../components/Radiobutton';
+import DropdownMenuC from '../components/DropdownMenuC';
+import DropdownMenuR from '../components/DropdownMenuR';
 
 const PropertyTypeScreen = props => {
   const [property, setProperty] = useState('residential');
