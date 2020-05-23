@@ -5,6 +5,7 @@ import EnterDetailsScreen from './screens/EnterDetailsScreen';
 import PasswordScreen from './screens/PasswordScreen';
 import OTPVerificationScreen from './screens/OTPVerificationScreen';
 import SetAPriceScreen from './screens/SetAPriceScreen';
+import PropertyTypeScreen from './screens/PropertyTypeScreen';
 
 let content = <SetAPriceScreen/>;
 export default function App() {
