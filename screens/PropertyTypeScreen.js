@@ -37,23 +37,27 @@ const PropertyTypeScreen = props => {
 
   if(commercialCheck)
   {
-      return (
+     return (
       <View style={styles.container}>
       <View style={styles.header}>
     <Text style={styles.texth}>Property Type</Text>
     </View>
-        <View style={{...styles.blockContainer, alignItems: 'left', flexDirection: 'row-reverse', marginHorizontal: 15, paddingHorizontal: 30}}>
-        <View style={styles.headingContainer}><Text style={styles.headingText}></Text></View>
-        <Text style={styles.radioText}>Residential </Text>
-       <RadioButton  onPress={residentialRadioHandler} checked={residentialCheck} />
+        <View style={styles.blockContainer}>
+        
+        <Text style={styles.radioText}>Commercial </Text>
+       <RadioButton  onPress={commercialRadioHandler} checked={commercialCheck} />
    
-       <Text style={styles.radioText}>Commercial </Text>
-       <RadioButton checked={commercialCheck} onPress={commercialRadioHandler} />
+       <Text style={styles.radioText}>Residential </Text>
+       <RadioButton checked={residentialCheck} onPress={residentialRadioHandler} />
+      </View>
+     
+      <View style={styles.dropstyle}>
        <DropdownMenuC/>
+     </View>
 
        
         
-   </View>
+   
      
       </View>
     )
@@ -65,18 +69,22 @@ else
       <View style={styles.header}>
     <Text style={styles.texth}>Property Type</Text>
     </View>
-        <View style={{...styles.blockContainer, alignItems: 'left', flexDirection: 'row-reverse', marginHorizontal: 15, paddingHorizontal: 30}}>
-        <View style={styles.headingContainer}><Text style={styles.headingText}></Text></View>
-        <Text style={styles.radioText}>Residential </Text>
-       <RadioButton  onPress={residentialRadioHandler} checked={residentialCheck} />
+        <View style={styles.blockContainer}>
+        
+        <Text style={styles.radioText}>Commercial </Text>
+       <RadioButton  onPress={commercialRadioHandler} checked={commercialCheck} />
    
-       <Text style={styles.radioText}>Commercial </Text>
-       <RadioButton checked={commercialCheck} onPress={commercialRadioHandler} />
+       <Text style={styles.radioText}>Residential </Text>
+       <RadioButton checked={residentialCheck} onPress={residentialRadioHandler} />
+      </View>
+     
+      <View style={styles.dropstyle}>
        <DropdownMenuR/>
+     </View>
 
        
         
-   </View>
+   
      
       </View>
     )
@@ -98,37 +106,19 @@ const styles = StyleSheet.create({
   },
   texth: {
     color:'#fff',
-    fontSize:23,
+    fontSize:25,
     fontFamily: 'System',
     fontWeight: 'bold',
-    //alignSelf: 'center',
     textAlign:'center',
   
   },
   blockContainer: {
-    backgroundColor: '#F7F5FA',
-    width: '97%',
-    marginLeft: 6,
-    elevation: 3,
-    borderRadius: 10,
-    marginVertical: 55,
-    marginHorizontal: 5,
-    paddingVertical: 30,
-    paddingHorizontal: 5
-  },
- 
-  textContainer: {
-    flexDirection: 'row-reverse',
-    justifyContent: 'center',
-    marginLeft: 0
-  },
-  headingContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 18,
-    
+      width: '97%',
+      marginVertical: 25,
+      paddingVertical: 40, 
+      flexDirection: 'row-reverse', 
+      marginHorizontal: 20, 
+      paddingHorizontal: 39
   },
   radioText: {
     flexDirection: 'row',
@@ -136,6 +126,19 @@ const styles = StyleSheet.create({
     marginHorizontal: 15,
     fontSize: 15
   },
+  liststyle: {
+    alignItems:'center',
+   paddingVertical: 30,
+   justifyContent: 'center',
+    width: 120 * 2,
+    height: 30,
+     marginHorizontal: 70,
+    backgroundColor: '#fff',
+    borderRadius:20
+  },
+  dropstyle: {
+    
+  }
   
 });
 export default PropertyTypeScreen;
