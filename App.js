@@ -6,8 +6,8 @@ import PasswordScreen from './screens/PasswordScreen';
 import OTPVerificationScreen from './screens/OTPVerificationScreen';
 import SetAPriceScreen from './screens/SetAPriceScreen';
 import PropertyTypeScreen from './screens/PropertyTypeScreen';
-
-let content = <SetAPriceScreen/>;
+import LoginSignUpScreen from './screens/LoginSignUpScreen';
+let content = <LoginSignUpScreen/>;
 export default function App() {
   return (
     <View style={styles.container}>
