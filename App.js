@@ -7,12 +7,14 @@ import OTPVerificationScreen from './screens/OTPVerificationScreen';
 import SetAPriceScreen from './screens/SetAPriceScreen';
 import PropertyTypeScreen from './screens/PropertyTypeScreen';
 import LoginSignUpScreen from './screens/LoginSignUpScreen';
-let content = <LoginSignUpScreen/>;
+import AppNavigator from './AppNavigator/AppNavigator';
+//let content = <LoginSignUpScreen/>;
 export default function App() {
   return (
-    <View style={styles.container}>
-      {content}
-    </View>
+    <AppNavigator/>
+    //<View style={styles.container}>
+    //  {content}
+    //</View>
   );
 }
 
