@@ -4,6 +4,7 @@ import {
     TextInput,
     StyleSheet,
     View,
+    KeyboardAvoidingView,
     SafeAreaView,
     TouchableOpacity,
     Alert,
@@ -29,7 +30,7 @@ const LoginSignUpScreen = props => {
     return (
         <View style={styles.screen}>
             <Image source={require('../assets/back.jpeg')} style={styles.img} />
-            <View style={styles.screen1}>
+            <KeyboardAvoidingView style={styles.screen1}>
                 <View style={styles.text1Container}>
                     <Input style={styles.input1} placeholder={"Phone/Email"} onChangeText={nEM} value={nem} />
                 </View>
@@ -77,7 +78,7 @@ const LoginSignUpScreen = props => {
                         props.navigation.navigate({ routeName: 'EnterDScreen' });
                     }}>{"Sign Up"}</MainButton>
                 </View>
-            </View>
+            </KeyboardAvoidingView>
         </View>
     )
 };

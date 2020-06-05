@@ -1,0 +1,70 @@
+Arguments: 
+  /usr/bin/node /usr/local/bin/yarn add react-native-firebas
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  13.14.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/react-native-firebas: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66987:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140748:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141720:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141642:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1201:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "@react-native-community/masked-view": "0.1.6",
+      "expo": "~37.0.3",
+      "react": "~16.9.0",
+      "react-dom": "~16.9.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
+      "react-native-elements": "^2.0.0",
+      "react-native-gesture-handler": "~1.6.0",
+      "react-native-otp-inputs": "^5.0.1",
+      "react-native-reanimated": "~1.7.0",
+      "react-native-safe-area-context": "0.7.3",
+      "react-native-screens": "~2.2.0",
+      "react-native-ultimate-modal-picker": "^0.2.0",
+      "react-native-web": "~0.11.7",
+      "react-navigation": "^4.3.9",
+      "react-navigation-drawer": "^2.4.13",
+      "react-navigation-stack": "^2.5.1",
+      "react-navigation-tabs": "^2.8.13",
+      "validator": "^13.0.0"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.8.6",
+      "babel-preset-expo": "~8.1.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
