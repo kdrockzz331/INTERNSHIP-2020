@@ -8,5 +8,4 @@
 -->UI design screens are for the for the app design
 
 -->most of the screens are made and were kept seperately in Screens folder and required components are available in the components folder
-
-
+//required screens can be known from the ui_design_screeens
